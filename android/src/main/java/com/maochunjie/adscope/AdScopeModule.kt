@@ -155,6 +155,7 @@ class AdScopeModule(reactContext: ReactApplicationContext) :
               "Ad failed to load, code: $errorCode",
               errorCode.toString()
             )
+            cleanupAdView()
           }
 
           override fun onAdClosed() {
@@ -180,6 +181,7 @@ class AdScopeModule(reactContext: ReactApplicationContext) :
         promise.resolve(result)
       })
     } catch (e: Exception) {
+      cleanupAdView()
       val result = Arguments.createMap()
       result.putString("code", "0")
       result.putString("message", "Failed to create/load splash ad: ${e.message}")
