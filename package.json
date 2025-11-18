@@ -1,6 +1,6 @@
 {
   "name": "react-native-adscope",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "倍孜SDK",
   "main": "src/index.tsx",
   "scripts": {
